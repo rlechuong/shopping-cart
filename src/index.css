@@ -70,12 +70,14 @@ h6 {
 /* Design Tokens */
 :root {
   --background: #121212;
+  --image-bg: #2a2a2a;
   --surface: #1e1e1e;
   --primary: #90caf9;
   --primary-bright: #bbdefb;
+  --primary-dark: #64b5f6;
   --text-primary: #ffffff;
   --text-secondary: #b0b0b0;
-  --border: #333333;
+  --border: #555555;
   --danger: #f48fb1;
 }
 
