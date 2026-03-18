@@ -98,7 +98,8 @@ a:hover {
   text-decoration: underline;
 }
 
-button:active {
+button:active,
+a[class]:active {
   transform: scale(0.97);
   transition: transform 0.1s ease;
 }
