@@ -97,3 +97,8 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+button:active {
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
+}
