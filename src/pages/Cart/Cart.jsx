@@ -1,17 +1,25 @@
-import { useOutletContext } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 import CartItem from "../../components/CartItem/CartItem";
 import styles from "./Cart.module.css";
 
 function Cart() {
-  const { cart, updateQuantity } = useOutletContext();
+  const { cart, updateQuantity, clearCart } = useOutletContext();
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+  const handleCheckout = () => {
+    if (window.confirm("Simulate checkout? This will clear your cart.")) {
+      clearCart();
+    }
+  };
 
   if (cart.length === 0) {
     return (
       <div className={styles.empty}>
         <h1>Your cart is empty</h1>
-        <p>Head to the shop to add some items!</p>
+        <p>
+          Head to the <Link to="/shop">shop</Link> to add some items!
+        </p>
       </div>
     );
   }
@@ -31,7 +39,9 @@ function Cart() {
             <span>Items ({cart.reduce((sum, item) => sum + item.quantity, 0)})</span>
             <span className={styles.summaryTotal}>${total.toFixed(2)}</span>
           </div>
-          <button className={styles.checkoutButton}>Proceed to Checkout</button>
+          <button className={styles.checkoutButton} onClick={handleCheckout}>
+            Proceed to Checkout
+          </button>
         </div>
       </div>
     </div>

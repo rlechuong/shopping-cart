@@ -28,11 +28,13 @@ function App() {
     }
   };
 
+  const clearCart = () => setCart([]);
+
   return (
     <div>
       <Navbar cart={cart} />
       <main>
-        <Outlet context={{ cart, addToCart, updateQuantity }} />
+        <Outlet context={{ cart, addToCart, updateQuantity, clearCart }} />
       </main>
     </div>
   );

@@ -82,6 +82,10 @@ h6 {
 }
 
 /* Global Styles */
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   background-color: var(--background);
   color: var(--text-primary);
