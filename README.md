@@ -1,16 +1,45 @@
-# React + Vite
+# Shopping Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A mock shopping cart built with React.
 
-Currently, two official plugins are available:
+**Live Demo:** https://rlechuong-shopping-cart.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Browse products fetched from the FakeStore API
+- Add items to cart with quantity selection
+- Real time cart count in the navigation bar
+- Adjust quantities and remove items from cart
+- Order summary with subtotal calculations
+- Responsive design for different screen sizes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Built With
 
-## Expanding the ESLint configuration
+- React 19
+- React Router v7
+- CSS Modules
+- Vitest + React Testing Library
+- Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## What I Learned
+
+- Managing shared state and lifting state up
+- Client side routing with React Router
+- Data fetching with useEffect and async/await
+- Component testing with React Testing Library
+- CSS Modules with design tokens for styling
+
+## Running Locally
+
+```bash
+git clone https://github.com/rlechuong/shopping-cart.git
+cd shopping-cart
+npm install
+npm run dev
+```
+
+## Running Tests
+
+```bash
+npm test
+```
